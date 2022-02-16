@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Robot;
 
 namespace UI
 {
@@ -23,6 +24,25 @@ namespace UI
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void BtnOK_Click(object sender, RoutedEventArgs e)
+        {
+            string url = txtUrl.Text;
+            MessageBox.Show(url);
+            if (url != "")
+            {
+                var response = Indeed.GetUrl(url).Result;
+                MessageBox.Show(response);
+                //txtResponse.Text = Indeed.GetUrl(txtUrl.Text).Result;
+                MessageBox.Show("Finished !");
+            }
+            else
+            {
+                MessageBox.Show("URL cannot be empty !");
+                return;
+            }
         }
     }
 }
