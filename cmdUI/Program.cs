@@ -8,7 +8,10 @@ namespace cmdUI
         static void Main(string[] args)
         {
             var url = Input("Entrer a valid URL");
-            var response = Indeed.GetUrl(url).Result;
+            //var scraper = new Indeed();
+
+            //var response = scraper.GetUrl(url).Result;
+            //var res = scraper.
             Console.WriteLine(response);
         }
 

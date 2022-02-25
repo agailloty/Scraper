@@ -3,22 +3,31 @@ using System.Linq;
 
 namespace Persistence
 {
+    using System;
+    using System.Linq;
     public class JobOffer
     {
         public string Title { get; set; }
         public string Company { get; set; }
         public string Description { get; set; }
         public string City { get; set; }
-        private DateTime _published;
-        public DateTime Published
+        private string _nbDays { get; set; }
+        public string DaysAgo
         {
-            get => _published;
+            get => _nbDays;
             set
             {
-                string daysAgo = value.ToString();
-                var nbDays = -Int32.Parse(string.Join("", daysAgo.ToCharArray().Where(Char.IsDigit)));
-                _published = DateTime.Now.AddDays(nbDays);
+                if (value.Contains("Il y a"))
+                {
+                    _nbDays = string.Join("", value.ToCharArray().Where(Char.IsDigit));
+                }
+                else
+                {
+                    _nbDays = "0";
+                }
             }
         }
+        public DateTime Published
+        { get => DateTime.Now.AddDays(-Int32.Parse(DaysAgo)); }
     }
 }
