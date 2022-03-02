@@ -33,7 +33,7 @@ namespace UI
             MessageBox.Show(url);
             if (url != "")
             {
-                var response = Indeed.GetUrl(url).Result;
+                var response = Indeed.GetUrlAsync(url).Result;
                 MessageBox.Show(response);
                 //txtResponse.Text = Indeed.GetUrl(txtUrl.Text).Result;
                 MessageBox.Show("Finished !");
