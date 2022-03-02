@@ -3,8 +3,6 @@ using System.Linq;
 
 namespace Persistence
 {
-    using System;
-    using System.Linq;
     public class JobOffer
     {
         public string Title { get; set; }
