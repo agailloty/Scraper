@@ -27,21 +27,31 @@ namespace UI
 
         }
 
-        private void BtnOK_Click(object sender, RoutedEventArgs e)
+        private async void BtnOK_Click(object sender, RoutedEventArgs e)
         {
-            string url = txtUrl.Text;
-            MessageBox.Show(url);
-            if (url != "")
+            string query = txtQuery.Text;
+            string location = txtLocation.Text;
+            int nbPages = 1;
+            Int32.TryParse(txtNbPages.Text, out nbPages);
+
+            //MessageBox.Show(url);
+            if (query != "")
             {
-                var response = Indeed.GetUrlAsync(url).Result;
-                MessageBox.Show(response);
-                //txtResponse.Text = Indeed.GetUrl(txtUrl.Text).Result;
-                MessageBox.Show("Finished !");
+
+                var scraper = new Indeed(query, nbPages, location);
+                var allJobs = await scraper.GetJobsAsync();
+                string jobTitles = "";
+                foreach (var job in allJobs)
+                {
+                    jobTitles += job.Title;
+                }
+
+                txtResponse.Text = Environment.NewLine + jobTitles;
+
             }
             else
             {
-                MessageBox.Show("URL cannot be empty !");
-                return;
+                MessageBox.Show("Query cannot be empty !");
             }
         }
     }

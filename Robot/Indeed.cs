@@ -51,8 +51,8 @@ namespace Robot
             var allJobs = new List<List<JobOffer>>();
             foreach (var url in urls)
             {
-                var job = ParseHtmlAsync(url);
-                allJobs.Add(await job);
+                var job = await ParseHtmlAsync(url);
+                allJobs.Add(job);
             }
 
             return allJobs.SelectMany(i => i).ToList();
