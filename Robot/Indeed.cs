@@ -90,7 +90,7 @@ namespace Robot
             for (int i = 0; i < nbJobs; i++)
             {
                 var job = new JobOffer();
-                job.Title = jobTitles.ElementAt(i);
+                job.Title = jobTitles.ElementAt(i).Replace("nouveau", "");
                 job.Company = companyNames.ElementAt(i);
                 job.City = companyLocations.ElementAt(i);
                 job.Description = jobSnippets.ElementAt(i);

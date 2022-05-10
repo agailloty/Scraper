@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{FADFE249-E139-487F-BD57-9FC3C8F5CFA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{FADFE249-E139-487F-BD57-9FC3C8F5CFA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robot", "Robot\Robot.csproj", "{30A9611B-608D-4CA5-A46E-BF4902EBA27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robot", "Robot\Robot.csproj", "{30A9611B-608D-4CA5-A46E-BF4902EBA27B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{4E5E02A4-A5A5-4077-936A-32FBA6E1E2B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{4E5E02A4-A5A5-4077-936A-32FBA6E1E2B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIForm", "UIForm\UIForm.csproj", "{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FADFE249-E139-487F-BD57-9FC3C8F5CFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +57,23 @@ Global
 		{4E5E02A4-A5A5-4077-936A-32FBA6E1E2B9}.Release|x64.Build.0 = Release|Any CPU
 		{4E5E02A4-A5A5-4077-936A-32FBA6E1E2B9}.Release|x86.ActiveCfg = Release|Any CPU
 		{4E5E02A4-A5A5-4077-936A-32FBA6E1E2B9}.Release|x86.Build.0 = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|x64.Build.0 = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Debug|x86.Build.0 = Debug|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|x64.ActiveCfg = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|x64.Build.0 = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC82200A-DDB4-42FB-A34C-3618D2ADF05E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4A0DE8F-0CE6-4E2A-8F8B-830E129148D7}
 	EndGlobalSection
 EndGlobal
