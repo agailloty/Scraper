@@ -45,32 +45,32 @@ namespace Robot
             return urls;
         }
 
-        public List<JobOffer> GetJobs()
+        public async Task<List<JobOffer>> GetJobsAsync()
         {
             var urls = MakeUrls();
             var allJobs = new List<List<JobOffer>>();
             foreach (var url in urls)
             {
-                var job = ParseHtml(url);
+                var job = await ParseHtmlAsync(url);
                 allJobs.Add(job);
             }
 
             return allJobs.SelectMany(i => i).ToList();
         }
-        public static string GetUrl(string url)
+        public static async Task<string> GetUrlAsync(string url)
         {
             HttpClient client = new HttpClient();
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls13;
             client.DefaultRequestHeaders.Accept.Clear();
-            var response = client.GetStringAsync(url).Result;
+            var response = await client.GetStringAsync(url);
             return response;
         }
 
 
 
-        List<JobOffer> ParseHtml(string url)
+        async Task<List<JobOffer>> ParseHtmlAsync(string url)
         {
-            var response = GetUrl(url);
+            var response = await GetUrlAsync(url);
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(response);
             var res = htmlDoc.DocumentNode.Descendants("h2").

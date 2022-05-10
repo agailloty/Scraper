@@ -8,23 +8,29 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 	<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="9*" />
 			<ColumnDefinition Width="2*" />
 			<ColumnDefinition Width="1*" />
-			<ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
 	</Grid.ColumnDefinitions>
 
       <Grid.RowDefinitions> 
          <RowDefinition/> 
          <RowDefinition/> 
+         <RowDefinition Height="8*"/> 
+        <RowDefinition/> 
+        <RowDefinition/> 
          <RowDefinition/> 
-          <RowDefinition/> 
+         <RowDefinition/> 
+        <RowDefinition/> 
       </Grid.RowDefinitions> 
 
-      <Label Content="Enter url" Margin="1"/>
-        <TextBox Grid.Row="0" Grid.Column="0" Name="txtUrl" Margin="2"/>
-        <Button Grid.Row="0" Grid.Column="1" Click="BtnOK_Click" Content="OK" Margin="2"/>
-        <Label Grid.Row="1" Grid.Column="1" Name="MyLabel" Margin="2"/>
+      <Label Content="Query" Margin="1"/>
+        <TextBox Grid.Row="0" Grid.Column="0" Text="Data analyst" Name="txtQuery" Margin="1"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="France" Name="txtLocation" Margin="1"/>
+        <TextBox Grid.Row="0" Grid.Column="2" Text="4" Name="txtNbPages" Margin="1"/>
+        <Button Grid.Row="0" Grid.Column="3" Click="BtnOK_Click" Content="OK" Margin="1"/>
 
-        <TextBox Grid.Row="1" Grid.Column="0" Name="txtResponse" Margin="2"/>
+        <TextBox Grid.Row="2" TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="0" Name="txtResponse"/>
     </Grid>
 </Window>

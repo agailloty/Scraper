@@ -5,7 +5,19 @@ namespace Persistence
 {
     public class JobOffer
     {
-        public string Title { get; set; }
+        public int Id { get; set; }
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value.Replace("nouveau", "");
+            }
+        }
         public string Company { get; set; }
         public string Description { get; set; }
         public string City { get; set; }

@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Robot;
 
 namespace cmdUI
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var query = Input("Enter a query : ");
             var nbPages = Input("How many pages of 50 items : ");
@@ -19,7 +20,7 @@ namespace cmdUI
                 Console.WriteLine(url);
             }
 
-            var allJobs = scraper.GetJobs();
+            var allJobs = await scraper.GetJobsAsync();
             foreach (var job in allJobs)
             {
                 Console.WriteLine(job.Title);
